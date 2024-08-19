@@ -1,10 +1,10 @@
 import {
   checkStringIsNullOrWhiteSpace,
+  navigateTo,
+  redirectTo,
   showSimpleErrorMessage,
   toNumber,
 } from 'easy-soft-utility';
-
-import { navigateTo, redirectTo } from 'taro-fast-common/es/utils/tools';
 
 import { pathCollection } from '../customConfig/pathConfig';
 import QQMapWX from '../libs/qqmap-wx-jssdk.min';

@@ -7,17 +7,15 @@ import {
   transformListData,
 } from 'easy-soft-utility';
 
-import { navigateBack, transformSize } from 'taro-fast-common/es/utils/tools';
+import { navigateBack, transformSize } from 'taro-fast-common';
 import { CenterBox } from 'taro-fast-component/es/customComponents';
+import { getAdministrativeDivisionFullDataCache } from 'taro-fast-framework';
 import { AuthorizationWrapper } from 'taro-fast-framework/es/framework';
-import { getAdministrativeDivisionFullData } from 'taro-fast-framework/es/utils/globalStorageAssist';
 
 import { getQQMapWX } from '../../utils/tools';
 import BallGridBeat from '../BallGridBeat';
 
 export default class PageWrapper extends AuthorizationWrapper {
-  simulationFadeSpinDuration = 100;
-
   loadRemoteRequestDelay = 0;
 
   useFadeSpinWrapper = true;
@@ -167,7 +165,7 @@ export default class PageWrapper extends AuthorizationWrapper {
   };
 
   transformFullAdministrativeDivisionData = () => {
-    const { list } = getAdministrativeDivisionFullData();
+    const { list } = getAdministrativeDivisionFullDataCache();
 
     return (
       transformListData({

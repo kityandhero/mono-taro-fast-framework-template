@@ -1,8 +1,8 @@
 import classNames from 'classnames';
+import { Component } from 'react';
 import { View } from '@tarojs/components';
 
-import { ComponentBase } from 'taro-fast-common/es/customComponents';
-import { transformSize } from 'taro-fast-common/es/utils/tools';
+import { transformSize } from 'taro-fast-common';
 
 import './index.less';
 
@@ -14,7 +14,7 @@ const defaultProps = {
   color: '#fff',
 };
 
-class BallGridBeat extends ComponentBase {
+class BallGridBeat extends Component {
   getStyle = () => {
     const { size, margin, color } = this.props;
 
@@ -25,7 +25,7 @@ class BallGridBeat extends ComponentBase {
     };
   };
 
-  renderFurther() {
+  render() {
     const style = this.getStyle();
 
     return (
@@ -45,7 +45,6 @@ class BallGridBeat extends ComponentBase {
 }
 
 BallGridBeat.defaultProps = {
-  ...ComponentBase.defaultProps,
   ...defaultProps,
 };
 

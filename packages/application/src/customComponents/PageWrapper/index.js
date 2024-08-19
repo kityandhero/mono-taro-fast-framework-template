@@ -1,12 +1,17 @@
-import { isArray, isFunction, whetherNumber } from 'easy-soft-utility';
+import {
+  isArray,
+  isFunction,
+  navigateTo,
+  whetherNumber,
+} from 'easy-soft-utility';
 
-import { navigateTo, switchTab } from 'taro-fast-common/es/utils/tools';
-import { getVerifySignInResult } from 'taro-fast-framework/es/utils/tools';
+import { switchTab } from 'taro-fast-common';
+import { getVerifySignInResult } from 'taro-fast-framework';
 
 import { pathCollection } from '../../customConfig/pathConfig';
 import PageWrapperCore from '../PageWrapperCore';
 
-export default class PageWrapper extends PageWrapperCore {
+class PageWrapper extends PageWrapperCore {
   checkSignInSuccess = () => {
     const verifySignInResult = getVerifySignInResult();
     const v = this.getSignInResult();
@@ -188,7 +193,7 @@ export default class PageWrapper extends PageWrapperCore {
     navigateTo({
       url: `${
         pathCollection.customer.shippingAddressSingleList.path
-      }?fromExchange=${!!fromExchange ? whetherNumber.yes : whetherNumber.no}`,
+      }?fromExchange=${fromExchange ? whetherNumber.yes : whetherNumber.no}`,
     });
   };
 
@@ -262,3 +267,5 @@ export default class PageWrapper extends PageWrapperCore {
     });
   }
 }
+
+export { PageWrapper };

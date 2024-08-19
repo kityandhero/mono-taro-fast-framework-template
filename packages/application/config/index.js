@@ -82,9 +82,12 @@ const config = {
   },
 };
 
-export default function (merge) {
+export default function mergeConfig(merge) {
   if (process.env.NODE_ENV === 'development') {
+    // eslint-disable-next-line unicorn/prefer-module
     return merge({}, config, require('./dev'));
   }
+
+  // eslint-disable-next-line unicorn/prefer-module
   return merge({}, config, require('./prod'));
 }

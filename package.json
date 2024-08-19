@@ -1,16 +1,16 @@
 {
-  "name": "mono-management",
+  "name": "mono-application",
   "version": "1.0.0",
   "author": "",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build": "cd packages/application && npm run build",
+    "build": "cd packages/application && npm run x:build",
     "commitlint": "npx commitlint --edit",
     "precommit": "npm run z:lint:staged:quiet",
     "prepare": "echo do other prepare work with here before install package",
-    "start": "cd packages/application && npm run start",
+    "start": "cd packages/application && npm run x:start",
     "start:original": "cd packages/application && npm run start:original",
     "test:application": "cd packages/application && npm run z:test",
     "test:management": "cd packages/application && npm run z:test",
