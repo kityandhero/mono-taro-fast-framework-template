@@ -1,0 +1,189 @@
+{
+  "miniprogramRoot": "dist/weapp/",
+  "projectname": "taro-fast-application",
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "appid": "wx9530aa9e570bb9eb",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": false,
+    "postcss": false,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": false,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": true,
+    "useStaticServer": true,
+    "condition": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.17.0",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "entry",
+          "pathName": "pages/entry/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "empty",
+          "pathName": "section/pages/empty/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "home",
+          "pathName": "pages/home/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "section",
+          "pathName": "section/pages/section/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "article",
+          "pathName": "section/pages/article/main/index",
+          "query": "articleId=1511659807235510272",
+          "scene": null
+        },
+        {
+          "name": "articleWeb",
+          "pathName": "section/pages/article/main/index",
+          "query": "articleId=1534431881662173184",
+          "scene": null
+        },
+        {
+          "name": "customer",
+          "pathName": "pages/customer/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "scoreCenter",
+          "pathName": "customer/pages/scoreCenter/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "scoreMall",
+          "pathName": "customer/pages/scoreMall/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "scoreProductDetail",
+          "pathName": "customer/pages/scoreMall/detail/index",
+          "query": "scoreProductId=1517788992886673408",
+          "scene": null
+        },
+        {
+          "name": "scoreExchangeSuccess",
+          "pathName": "customer/pages/scoreMall/exchangeSuccess/index",
+          "query": "scoreOrderId=1519572830885384193",
+          "scene": null
+        },
+        {
+          "name": "scoreExchangePageList",
+          "pathName": "customer/pages/scoreMall/exchangePageList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "shippingAddressSingleList",
+          "pathName": "customer/pages/shippingAddress/singleList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "shippingAddressAdd",
+          "pathName": "customer/pages/shippingAddress/add/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "checkIn",
+          "pathName": "customer/pages/checkIn/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "knowledgeCompetition",
+          "pathName": "customer/pages/knowledgeCompetition/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "contact",
+          "pathName": "section/pages/contact/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "discuss",
+          "pathName": "section/pages/discuss/main/index",
+          "query": "sectionId=1529001474770735104",
+          "scene": null
+        },
+        {
+          "name": "mediaList",
+          "pathName": "section/pages/media/main/index",
+          "query": "sectionId=1529001384874217472",
+          "scene": null
+        },
+        {
+          "name": "life",
+          "pathName": "pages/life/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "shareQrCode",
+          "pathName": "pages/entry/main/index",
+          "query": "scene=shareId%3D1534791355413434368",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "srcMiniprogramRoot": "dist/weapp/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}
