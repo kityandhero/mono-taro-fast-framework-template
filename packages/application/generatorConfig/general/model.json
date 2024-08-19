@@ -1,0 +1,88 @@
+{
+  "list": [
+    {
+      "apis": [
+        {
+          "title": "登录",
+          "api": "/share/signIn",
+          "effect": "signIn",
+          "service": "signInData",
+          "type": "singleData"
+        },
+        {
+          "title": "静默登录",
+          "api": "/metaData/signInSilent",
+          "effect": "signInSilent",
+          "service": "signInSilentData",
+          "type": "singleData"
+        },
+        {
+          "title": "注册",
+          "api": "/metaData/registerWithWeChat",
+          "effect": "registerWithWeChat",
+          "service": "registerWithWeChatData",
+          "type": "singleData"
+        },
+        {
+          "title": "凭证校验",
+          "api": "/metaData/checkTicketValidity",
+          "effect": "checkTicketValidity",
+          "service": "checkTicketValidityData",
+          "type": "singleData"
+        }
+      ],
+      "cover": true,
+      "title": "登录注册",
+      "name": "global"
+    },
+    {
+      "apis": [
+        {
+          "title": "获取元数据",
+          "api": "/metaData/getMetaData",
+          "effect": "getMetaData",
+          "service": "getMetaDataData",
+          "type": "singleData"
+        }
+      ],
+      "cover": true,
+      "title": "登录",
+      "name": "entrance"
+    },
+    {
+      "apis": [
+        {
+          "title": "存储分享参数",
+          "api": "/share/createShareUrlParams",
+          "effect": "createShareUrlParameters",
+          "service": "createShareUrlParametersData",
+          "type": "singleData"
+        },
+        {
+          "title": "兑换分享数据",
+          "api": "/share/exchangeShare",
+          "effect": "exchangeShare",
+          "service": "exchangeShareData",
+          "type": "singleData"
+        }
+      ],
+      "cover": true,
+      "title": "登录",
+      "name": "share"
+    },
+    {
+      "apis": [
+        {
+          "title": "获取当前登录用户信息",
+          "api": "/customerCenter/customer/getCurrentInfo",
+          "effect": "getCurrentInfo",
+          "service": "getCurrentInfoData",
+          "type": "singleData"
+        }
+      ],
+      "cover": true,
+      "title": "用户相关",
+      "name": "customer"
+    }
+  ]
+}

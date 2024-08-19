@@ -21,9 +21,9 @@ import {
   // Grid,
   Line,
   // Price,
-} from 'taro-fast-component/es/customComponents';
+} from 'taro-fast-component';
 
-import PageWrapper from '../../../customComponents/PageWrapper';
+import { PageWrapper } from '../../../customComponents/PageWrapper';
 import { filePrefix } from '../../../customConfig/constants';
 
 import './index.less';

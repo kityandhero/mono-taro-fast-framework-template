@@ -14,7 +14,7 @@ import {
   ImageBox,
   Line,
   Space,
-} from 'taro-fast-component/es/customComponents';
+} from 'taro-fast-component';
 
 import { PageWrapper } from '../../../../customComponents/PageWrapper';
 import { filePrefix, logoImage } from '../../../../customConfig/constants';

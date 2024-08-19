@@ -9,7 +9,7 @@ import { switchTab } from 'taro-fast-common';
 import { getVerifySignInResult } from 'taro-fast-framework';
 
 import { pathCollection } from '../../customConfig/pathConfig';
-import PageWrapperCore from '../PageWrapperCore';
+import { PageWrapperCore } from '../PageWrapperCore';
 
 class PageWrapper extends PageWrapperCore {
   checkSignInSuccess = () => {

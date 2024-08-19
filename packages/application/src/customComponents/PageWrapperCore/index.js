@@ -8,14 +8,16 @@ import {
 } from 'easy-soft-utility';
 
 import { navigateBack, transformSize } from 'taro-fast-common';
-import { CenterBox } from 'taro-fast-component/es/customComponents';
-import { getAdministrativeDivisionFullDataCache } from 'taro-fast-framework';
-import { AuthorizationWrapper } from 'taro-fast-framework/es/framework';
+import { CenterBox } from 'taro-fast-component';
+import {
+  AuthorizationWrapper,
+  getAdministrativeDivisionFullDataCache,
+} from 'taro-fast-framework';
 
 import { getQQMapWX } from '../../utils/tools';
 import BallGridBeat from '../BallGridBeat';
 
-export default class PageWrapper extends AuthorizationWrapper {
+class PageWrapperCore extends AuthorizationWrapper {
   loadRemoteRequestDelay = 0;
 
   useFadeSpinWrapper = true;
@@ -206,3 +208,5 @@ export default class PageWrapper extends AuthorizationWrapper {
     navigateBack();
   };
 }
+
+export { PageWrapperCore };

@@ -1,6 +1,6 @@
-import { actionCore } from 'taro-fast-framework/es/utils/actionAssist';
+import { actionCore } from 'taro-fast-framework';
 
-export function createShareUrlParamsAction({
+export function createShareUrlParametersAction({
   target,
   handleData,
   successCallback,

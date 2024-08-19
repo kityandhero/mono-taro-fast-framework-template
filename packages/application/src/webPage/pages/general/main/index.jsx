@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { WebPageBase } from 'taro-fast-framework/es/framework';
+import { WebPageBase } from 'taro-fast-framework';
 
 // eslint-disable-next-line no-undef
 definePageConfig({

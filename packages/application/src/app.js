@@ -1,9 +1,9 @@
 import { checkWhetherDevelopmentEnvironment } from 'easy-soft-utility';
 
-import { AppBase } from 'taro-fast-framework/es/framework';
+import { AppBase } from 'taro-fast-framework';
 
 import { filePrefix } from './customConfig/constants';
-import { prepareModel } from './models';
+import { prepareModel } from './modelBuilders';
 
 import './app.less';
 
@@ -34,8 +34,8 @@ const config = {
 prepareModel();
 
 class App extends AppBase {
-  constructor(props) {
-    super(props, config);
+  constructor(properties) {
+    super(properties, config);
   }
 }
 

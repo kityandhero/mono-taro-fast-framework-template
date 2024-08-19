@@ -9,9 +9,9 @@ import {
 } from 'easy-soft-utility';
 
 import { transformSize } from 'taro-fast-common';
-import { ActivityIndicator } from 'taro-fast-component/es/customComponents';
+import { ActivityIndicator } from 'taro-fast-component';
 
-import PageWrapper from '../../../customComponents/PageWrapper';
+import { PageWrapper } from '../../../customComponents/PageWrapper';
 import { shareTransfer } from '../../../customConfig/constants';
 import { pathCollection } from '../../../customConfig/pathConfig';
 import { exchangeShareDataAction } from '../../../utils/shareAction';
