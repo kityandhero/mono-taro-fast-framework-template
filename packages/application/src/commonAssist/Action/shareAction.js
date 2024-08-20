@@ -45,13 +45,3 @@ export function exchangeShareDataAction({
     failureCallback,
   });
 }
-
-/**
- * 占位函数
- *
- * @export
- * @returns
- */
-export function empty() {
-  return {};
-}

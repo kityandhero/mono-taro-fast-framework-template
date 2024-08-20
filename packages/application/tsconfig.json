@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
+    "outDir": "./dist/temp",
     "baseUrl": ".",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "experimentalDecorators": true,
     "paths": {
       "@/*": ["./src/*"]
     }

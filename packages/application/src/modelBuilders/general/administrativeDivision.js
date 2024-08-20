@@ -1,27 +1,26 @@
 import {
   getTacitlyState,
-  pretreatmentRemoteSingleData,
   reducerCollection,
   reducerDefaultParameters,
   reducerNameCollection,
 } from 'easy-soft-utility';
 
-import { getMetaDataData } from '../../services/global';
+import { singleListTreeThreeLevelData } from '../../services/administrativeDivision';
 
-export const globalTypeCollection = {
-  getMetaData: 'global/getMetaData',
+export const administrativeDivisionTypeCollection = {
+  singleListTreeThreeLevel: 'administrativeDivision/singleListTreeThreeLevel',
 };
 
 export function buildModel() {
   return {
-    namespace: 'global',
+    namespace: 'administrativeDivision',
 
     state: {
       ...getTacitlyState(),
     },
 
     effects: {
-      *getMetaData(
+      *singleListTreeThreeLevel(
         {
           payload,
           alias,
@@ -30,13 +29,13 @@ export function buildModel() {
         },
         { call, put },
       ) {
-        const response = yield call(getMetaDataData, payload);
+        const response = yield call(singleListTreeThreeLevelData, payload);
 
-        const dataAdjust = pretreatmentRemoteSingleData({
+        const dataAdjust = {
           source: response,
           successCallback: pretreatmentSuccessCallback || null,
           failCallback: pretreatmentFailCallback || null,
-        });
+        };
 
         yield put({
           type: reducerNameCollection.reducerRemoteData,

@@ -1,6 +1,7 @@
 import classNames from 'classnames';
-import { connect } from 'react-redux';
 import { View } from '@tarojs/components';
+
+import { connect } from 'easy-soft-dva';
 
 import { navigateBack, transformSize } from 'taro-fast-common';
 import {
@@ -16,8 +17,8 @@ import {
   Space,
 } from 'taro-fast-component';
 
-import { PageWrapper } from '../../../../customComponents/PageWrapper';
-import { filePrefix, logoImage } from '../../../../customConfig/constants';
+import { PageWrapper } from '../../../../customComponents';
+import { filePrefix, logoImage } from '../../../../customConfig';
 
 import './index.less';
 

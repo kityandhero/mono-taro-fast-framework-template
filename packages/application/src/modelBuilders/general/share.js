@@ -11,6 +11,11 @@ import {
   exchangeShareData,
 } from '../../services/share';
 
+export const shareTypeCollection = {
+  createShareUrlParameters: 'share/createShareUrlParameters',
+  exchangeShare: 'share/exchangeShare',
+};
+
 export function buildModel() {
   return {
     namespace: 'share',

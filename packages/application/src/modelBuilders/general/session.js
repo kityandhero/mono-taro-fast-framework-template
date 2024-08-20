@@ -6,23 +6,23 @@ import {
   reducerNameCollection,
 } from 'easy-soft-utility';
 
-import { getCurrentInfoData, getCustomerData } from '../../services/customer';
+import { exchangePhoneData, refreshSessionData } from '../../services/session';
 
-export const customerTypeCollection = {
-  getCurrentInfo: 'customer/getCurrentInfo',
-  getCustomer: 'customer/getCustomer',
+export const sessionTypeCollection = {
+  refreshSession: 'session/refreshSession',
+  exchangePhone: 'session/exchangePhone',
 };
 
 export function buildModel() {
   return {
-    namespace: 'customer',
+    namespace: 'session',
 
     state: {
       ...getTacitlyState(),
     },
 
     effects: {
-      *getCurrentInfo(
+      *refreshSession(
         {
           payload,
           alias,
@@ -31,7 +31,7 @@ export function buildModel() {
         },
         { call, put },
       ) {
-        const response = yield call(getCurrentInfoData, payload);
+        const response = yield call(refreshSessionData, payload);
 
         const dataAdjust = pretreatmentRemoteSingleData({
           source: response,
@@ -48,7 +48,7 @@ export function buildModel() {
 
         return dataAdjust;
       },
-      *getCustomer(
+      *exchangePhone(
         {
           payload,
           alias,
@@ -57,7 +57,7 @@ export function buildModel() {
         },
         { call, put },
       ) {
-        const response = yield call(getCustomerData, payload);
+        const response = yield call(exchangePhoneData, payload);
 
         const dataAdjust = pretreatmentRemoteSingleData({
           source: response,

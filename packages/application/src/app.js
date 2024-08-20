@@ -2,7 +2,7 @@ import { checkWhetherDevelopmentEnvironment } from 'easy-soft-utility';
 
 import { AppBase } from 'taro-fast-framework';
 
-import { filePrefix } from './customConfig/constants';
+import { filePrefix } from './customConfig';
 import { prepareModel } from './modelBuilders';
 
 import './app.less';

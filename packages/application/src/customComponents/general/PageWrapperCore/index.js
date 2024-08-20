@@ -14,7 +14,8 @@ import {
   getAdministrativeDivisionFullDataCache,
 } from 'taro-fast-framework';
 
-import { getQQMapWX } from '../../utils/tools';
+import { modelTypeCollection } from '../../../modelBuilders';
+import { getQQMapWX } from '../../../utils';
 import BallGridBeat from '../BallGridBeat';
 
 class PageWrapperCore extends AuthorizationWrapper {
@@ -80,28 +81,28 @@ class PageWrapperCore extends AuthorizationWrapper {
 
   dispatchCheckTicketValidity = (data) => {
     return this.dispatchApi({
-      type: 'entrance/checkTicketValidity',
+      type: modelTypeCollection.entranceTypeCollection.checkTicketValidity,
       payload: data,
     });
   };
 
   dispatchRefreshSession = (data) => {
     return this.dispatchApi({
-      type: 'session/refreshSession',
+      type: modelTypeCollection.sessionTypeCollection.refreshSession,
       payload: data,
     });
   };
 
   dispatchGetMetaData = (data) => {
     return this.dispatchApi({
-      type: 'global/getMetaData',
+      type: modelTypeCollection.globalTypeCollection.getMetaData,
       payload: data,
     });
   };
 
   dispatchSignInSilent = (data) => {
     return this.dispatchApi({
-      type: 'entrance/signInSilent',
+      type: modelTypeCollection.entranceTypeCollection.signInSilent,
       payload: data,
     });
   };
@@ -114,21 +115,21 @@ class PageWrapperCore extends AuthorizationWrapper {
 
   dispatchRegisterWithWeChat = (data = {}) => {
     return this.dispatchApi({
-      type: 'entrance/registerWithWeChat',
+      type: modelTypeCollection.entranceTypeCollection.registerWithWeChat,
       payload: data,
     });
   };
 
   dispatchExchangePhone = (data = {}) => {
     return this.dispatchApi({
-      type: 'session/exchangePhone',
+      type: modelTypeCollection.sessionTypeCollection.exchangePhone,
       payload: data,
     });
   };
 
   dispatchGetCustomer = (data = {}) => {
     return this.dispatchApi({
-      type: 'customer/getCustomer',
+      type: modelTypeCollection.customerTypeCollection.getCustomer,
       payload: data,
     });
   };
@@ -137,7 +138,7 @@ class PageWrapperCore extends AuthorizationWrapper {
     const { dispatch } = this.props;
 
     dispatch({
-      type: 'global/getMetaData',
+      type: modelTypeCollection.globalTypeCollection.getMetaData,
       payload: { force: true },
     });
   };
@@ -161,7 +162,8 @@ class PageWrapperCore extends AuthorizationWrapper {
 
   dispatchGetFullAdministrativeDivisionData = (data = {}) => {
     return this.dispatchApi({
-      type: 'administrativeDivision/singleListTreeThreeLevel',
+      type: modelTypeCollection.administrativeDivisionTypeCollection
+        .singleListTreeThreeLevel,
       payload: data,
     });
   };

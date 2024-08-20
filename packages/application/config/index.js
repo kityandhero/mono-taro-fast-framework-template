@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-module */
 // eslint-disable-next-line import/no-commonjs
 // const path = require('path');
 
@@ -23,9 +24,10 @@ const config = {
     options: {},
   },
   framework: 'react',
-  // alias: {
-  //   '@': path.resolve(__dirname, '..', 'src'),
-  // },
+  alias: {
+    '@tarojs/runtime': require.resolve('@tarojs/runtime'),
+    // '@': path.resolve(__dirname, '..', 'src'),
+  },
   compiler: {
     type: 'webpack5',
     prebundle: {

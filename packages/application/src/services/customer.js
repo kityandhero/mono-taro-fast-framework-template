@@ -9,3 +9,12 @@ export async function getCurrentInfoData(parameters) {
     params: parameters,
   });
 }
+
+export const getCustomerDataApiAddress = '/customerCenter/customer/getCustomer';
+
+export async function getCustomerData(parameters) {
+  return request({
+    api: getCustomerDataApiAddress,
+    params: parameters,
+  });
+}

@@ -1,6 +1,6 @@
-import { connect } from 'react-redux';
 import { View } from '@tarojs/components';
 
+import { connect } from 'easy-soft-dva';
 import {
   checkStringIsNullOrWhiteSpace,
   isFunction,
@@ -11,11 +11,9 @@ import {
 import { transformSize } from 'taro-fast-common';
 import { ActivityIndicator } from 'taro-fast-component';
 
-import { PageWrapper } from '../../../customComponents/PageWrapper';
-import { shareTransfer } from '../../../customConfig/constants';
-import { pathCollection } from '../../../customConfig/pathConfig';
-import { exchangeShareDataAction } from '../../../utils/shareAction';
-import { redirectToArticle } from '../../../utils/tools';
+import { exchangeShareDataAction } from '../../../commonAssist';
+import { PageWrapper } from '../../../customComponents';
+import { pathCollection, shareTransfer } from '../../../customConfig';
 
 // eslint-disable-next-line no-undef
 definePageConfig({
@@ -147,12 +145,10 @@ export default class Index extends PageWrapper {
       transfer,
       title: titleEncode,
       url: urlEncode,
-      articleId,
     } = {
       transfer: shareTransfer.home,
       title: '',
       url: '',
-      articleId: '',
       ...urlParameters,
     };
 
@@ -164,13 +160,7 @@ export default class Index extends PageWrapper {
 
         break;
       }
-      case shareTransfer.article: {
-        this.showNavigationNotice();
 
-        redirectToArticle({ articleId });
-
-        break;
-      }
       case shareTransfer.customer: {
         this.showNavigationNotice();
 
@@ -178,6 +168,7 @@ export default class Index extends PageWrapper {
 
         break;
       }
+
       case shareTransfer.webPage: {
         this.showNavigationNotice();
 
@@ -194,11 +185,12 @@ export default class Index extends PageWrapper {
         }
 
         this.redirectToPath(
-          `${pathCollection.webPage.path}?title=${title}&url=${url}`,
+          `${pathCollection.webpage.path}?title=${title}&url=${url}`,
         );
 
         break;
       }
+
       default: {
         this.goToHomeTab();
       }

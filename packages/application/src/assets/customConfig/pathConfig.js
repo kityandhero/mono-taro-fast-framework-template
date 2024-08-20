@@ -124,13 +124,3 @@ export const pathCollection = {
   webpage: webPagePathCollection,
   customer: customerPathCollection,
 };
-
-/**
- * 占位函数
- *
- * @export
- * @returns
- */
-export async function empty() {
-  return {};
-}

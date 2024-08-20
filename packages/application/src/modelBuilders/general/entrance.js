@@ -6,7 +6,19 @@ import {
   reducerNameCollection,
 } from 'easy-soft-utility';
 
-import { getMetaDataData } from '../../services/entrance';
+import {
+  checkTicketValidityData,
+  registerWithWeChatData,
+  signInData,
+  signInSilentData,
+} from '../../services/entrance';
+
+export const entranceTypeCollection = {
+  signIn: 'entrance/signIn',
+  signInSilent: 'entrance/signInSilent',
+  registerWithWeChat: 'entrance/registerWithWeChat',
+  checkTicketValidity: 'entrance/checkTicketValidity',
+};
 
 export function buildModel() {
   return {
@@ -17,7 +29,7 @@ export function buildModel() {
     },
 
     effects: {
-      *getMetaData(
+      *signIn(
         {
           payload,
           alias,
@@ -26,7 +38,85 @@ export function buildModel() {
         },
         { call, put },
       ) {
-        const response = yield call(getMetaDataData, payload);
+        const response = yield call(signInData, payload);
+
+        const dataAdjust = pretreatmentRemoteSingleData({
+          source: response,
+          successCallback: pretreatmentSuccessCallback || null,
+          failCallback: pretreatmentFailCallback || null,
+        });
+
+        yield put({
+          type: reducerNameCollection.reducerRemoteData,
+          payload: dataAdjust,
+          alias,
+          ...reducerDefaultParameters,
+        });
+
+        return dataAdjust;
+      },
+      *signInSilent(
+        {
+          payload,
+          alias,
+          pretreatmentSuccessCallback,
+          pretreatmentFailCallback,
+        },
+        { call, put },
+      ) {
+        const response = yield call(signInSilentData, payload);
+
+        const dataAdjust = pretreatmentRemoteSingleData({
+          source: response,
+          successCallback: pretreatmentSuccessCallback || null,
+          failCallback: pretreatmentFailCallback || null,
+        });
+
+        yield put({
+          type: reducerNameCollection.reducerRemoteData,
+          payload: dataAdjust,
+          alias,
+          ...reducerDefaultParameters,
+        });
+
+        return dataAdjust;
+      },
+      *registerWithWeChat(
+        {
+          payload,
+          alias,
+          pretreatmentSuccessCallback,
+          pretreatmentFailCallback,
+        },
+        { call, put },
+      ) {
+        const response = yield call(registerWithWeChatData, payload);
+
+        const dataAdjust = pretreatmentRemoteSingleData({
+          source: response,
+          successCallback: pretreatmentSuccessCallback || null,
+          failCallback: pretreatmentFailCallback || null,
+        });
+
+        yield put({
+          type: reducerNameCollection.reducerRemoteData,
+          payload: dataAdjust,
+          alias,
+          ...reducerDefaultParameters,
+        });
+
+        return dataAdjust;
+      },
+      *checkTicketValidity(
+        {
+          payload,
+          alias,
+          pretreatmentSuccessCallback,
+          pretreatmentFailCallback,
+        },
+        { call, put },
+      ) {
+        const response = yield call(checkTicketValidityData, payload);
 
         const dataAdjust = pretreatmentRemoteSingleData({
           source: response,

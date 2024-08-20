@@ -3,37 +3,58 @@
     {
       "apis": [
         {
+          "title": "刷新会话",
+          "api": "/session/refreshSession",
+          "effect": "refreshSession",
+          "service": "refreshSessionData",
+          "type": "singleData"
+        },
+        {
+          "title": "交换手机号",
+          "api": "/session/exchangePhone",
+          "effect": "exchangePhone",
+          "service": "exchangePhoneData",
+          "type": "singleData"
+        }
+      ],
+      "cover": true,
+      "title": "会话相关",
+      "name": "session"
+    },
+    {
+      "apis": [
+        {
           "title": "登录",
-          "api": "/share/signIn",
+          "api": "/entrance/signIn",
           "effect": "signIn",
           "service": "signInData",
           "type": "singleData"
         },
         {
           "title": "静默登录",
-          "api": "/metaData/signInSilent",
+          "api": "/entrance/signInSilent",
           "effect": "signInSilent",
           "service": "signInSilentData",
           "type": "singleData"
         },
         {
           "title": "注册",
-          "api": "/metaData/registerWithWeChat",
+          "api": "/entrance/registerWithWeChat",
           "effect": "registerWithWeChat",
           "service": "registerWithWeChatData",
           "type": "singleData"
         },
         {
           "title": "凭证校验",
-          "api": "/metaData/checkTicketValidity",
+          "api": "/entrance/checkTicketValidity",
           "effect": "checkTicketValidity",
           "service": "checkTicketValidityData",
           "type": "singleData"
         }
       ],
       "cover": true,
-      "title": "登录注册",
-      "name": "global"
+      "title": "登录注册相关",
+      "name": "entrance"
     },
     {
       "apis": [
@@ -46,8 +67,8 @@
         }
       ],
       "cover": true,
-      "title": "登录",
-      "name": "entrance"
+      "title": "一般数据相关",
+      "name": "global"
     },
     {
       "apis": [
@@ -67,7 +88,7 @@
         }
       ],
       "cover": true,
-      "title": "登录",
+      "title": "分享相关",
       "name": "share"
     },
     {
@@ -78,11 +99,32 @@
           "effect": "getCurrentInfo",
           "service": "getCurrentInfoData",
           "type": "singleData"
+        },
+        {
+          "title": "获取信息",
+          "api": "/customerCenter/customer/getCustomer",
+          "effect": "getCustomer",
+          "service": "getCustomerData",
+          "type": "singleData"
         }
       ],
       "cover": true,
       "title": "用户相关",
       "name": "customer"
+    },
+    {
+      "apis": [
+        {
+          "title": "获取当前登录用户信息",
+          "api": "/administrativeDivision/singleListTreeThreeLevel",
+          "effect": "singleListTreeThreeLevel",
+          "service": "singleListTreeThreeLevelData",
+          "type": "singleListData"
+        }
+      ],
+      "cover": true,
+      "title": "地理数据",
+      "name": "administrativeDivision"
     }
   ]
 }

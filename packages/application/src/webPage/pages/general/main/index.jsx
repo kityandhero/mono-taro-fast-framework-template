@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import { connect } from 'easy-soft-dva';
 
 import { WebPageBase } from 'taro-fast-framework';
 
