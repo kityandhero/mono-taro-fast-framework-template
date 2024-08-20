@@ -3,7 +3,7 @@
 // const path = require('path');
 
 const config = {
-  projectName: 'simple-taro-fast-framework',
+  projectName: 'taro-fast-application',
   date: '2021-12-30',
   designWidth: 750,
   deviceRatio: {
@@ -38,6 +38,9 @@ const config = {
     enable: false,
   },
   mini: {
+    miniCssExtractPluginOption: {
+      ignoreOrder: true,
+    },
     postcss: {
       pxtransform: {
         enable: true,
@@ -62,6 +65,9 @@ const config = {
     // },
   },
   h5: {
+    miniCssExtractPluginOption: {
+      ignoreOrder: true,
+    },
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {

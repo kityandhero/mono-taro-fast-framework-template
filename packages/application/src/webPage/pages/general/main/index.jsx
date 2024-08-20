@@ -10,4 +10,6 @@ definePageConfig({
 @connect(({ schedulingControl }) => ({
   schedulingControl,
 }))
-export default class Index extends WebPageBase {}
+class WebPage extends WebPageBase {}
+
+export default WebPage;

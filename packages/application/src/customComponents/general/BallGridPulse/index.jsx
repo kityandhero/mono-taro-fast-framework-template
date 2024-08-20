@@ -4,7 +4,7 @@ import { View } from '@tarojs/components';
 
 import { transformSize } from 'taro-fast-common';
 
-import './index.less';
+// import './index.less';
 
 const classPrefix = `template-loading-ball-grid-pulse`;
 

@@ -19,7 +19,7 @@ definePageConfig({
   global,
   schedulingControl,
 }))
-class Index extends PageWrapper {
+class PageMain extends PageWrapper {
   onShareAppMessage() {
     const o = {
       path: pathCollection.root.home.path,
@@ -43,4 +43,4 @@ class Index extends PageWrapper {
   }
 }
 
-export default Index;
+export default PageMain;

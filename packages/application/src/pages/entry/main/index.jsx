@@ -30,7 +30,7 @@ definePageConfig({
     schedulingControl,
   }),
 )
-export default class Index extends PageWrapper {
+class PageMain extends PageWrapper {
   useFadeSpinWrapper = false;
 
   initMetaDataForce = true;
@@ -224,3 +224,5 @@ export default class Index extends PageWrapper {
     );
   }
 }
+
+export default PageMain;

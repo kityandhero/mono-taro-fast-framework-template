@@ -41,7 +41,7 @@ definePageConfig({
   global,
   schedulingControl,
 }))
-export default class Index extends PageWrapper {
+class PageMain extends PageWrapper {
   viewStyle = {
     backgroundColor: '#bc0509',
   };
@@ -187,3 +187,5 @@ export default class Index extends PageWrapper {
     );
   }
 }
+
+export default PageMain;

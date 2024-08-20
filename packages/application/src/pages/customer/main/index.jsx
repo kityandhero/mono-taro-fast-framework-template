@@ -4,6 +4,8 @@ import { connect } from 'easy-soft-dva';
 
 import { PageWrapper } from '../../../customComponents';
 
+import './index.less';
+
 export const classPrefix = `root-customer`;
 
 // eslint-disable-next-line no-undef
@@ -19,7 +21,7 @@ definePageConfig({
   global,
   schedulingControl,
 }))
-export default class Index extends PageWrapper {
+class PageMain extends PageWrapper {
   viewStyle = {
     backgroundColor: '#f5f5f5',
   };
@@ -42,3 +44,5 @@ export default class Index extends PageWrapper {
     );
   }
 }
+
+export default PageMain;
