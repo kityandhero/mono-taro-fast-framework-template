@@ -62,7 +62,7 @@
     "src/customConfig/general/constants.js",
     "src/customConfig/general/index.js",
     "src/customConfig/general/pathConfig.js",
-    "src/customConfig/index.js",
+    "src/customConfig/index.jsx",
     "src/customConfig/pathConfig.js",
     "src/customer/pages/signIn/main/index.jsx",
     "src/customer/pages/signIn/main/index.less",
