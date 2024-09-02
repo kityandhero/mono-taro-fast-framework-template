@@ -60,7 +60,7 @@
       "apis": [
         {
           "title": "获取元数据",
-          "api": "/metaData/getMetaData",
+          "api": "/metaData/get",
           "effect": "getMetaData",
           "service": "getMetaDataData",
           "type": "singleData"

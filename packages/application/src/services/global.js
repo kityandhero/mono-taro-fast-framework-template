@@ -1,6 +1,6 @@
 import { request } from 'easy-soft-utility';
 
-export const getMetaDataDataApiAddress = '/metaData/getMetaData';
+export const getMetaDataDataApiAddress = '/metaData/get';
 
 export async function getMetaDataData(parameters) {
   return request({
