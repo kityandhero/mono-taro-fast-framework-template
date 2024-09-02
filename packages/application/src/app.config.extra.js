@@ -15,6 +15,7 @@ export const config = {
   },
   apiSuccessCode: 200,
   authenticationFailCode: 2001,
+  navigationToSignInWhenSignInSilentFail: true,
   signInPath: '/customer/pages/signIn/main/index',
   apiVersion: 'beta',
   footerImage: LogoImage,

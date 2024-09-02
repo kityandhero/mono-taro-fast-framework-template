@@ -107,7 +107,7 @@ class PageWrapperCore extends AuthorizationWrapper {
     });
   };
 
-  parseSignInResultFromRemoteApiData = (remoteData) => {
+  parseSignInResultFromSignInSilentApiData = (remoteData) => {
     const { signInResult } = remoteData;
 
     return signInResult;
@@ -148,13 +148,13 @@ class PageWrapperCore extends AuthorizationWrapper {
     return global;
   };
 
-  parseTokenFromRemoteApiData = (remoteData) => {
+  parseTokenFromSignInSilentApiData = (remoteData) => {
     const { token } = remoteData;
 
     return token || '';
   };
 
-  parseOpenIdFromSignInApiData = (remoteData) => {
+  parseOpenIdFromSignInSilentApiData = (remoteData) => {
     const { openId } = remoteData;
 
     return openId || '';

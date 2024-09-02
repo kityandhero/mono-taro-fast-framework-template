@@ -4,14 +4,14 @@
       "apis": [
         {
           "title": "刷新会话",
-          "api": "/session/refreshSession",
+          "api": "/wechatApplication/session/refreshSession",
           "effect": "refreshSession",
           "service": "refreshSessionData",
           "type": "singleData"
         },
         {
           "title": "交换手机号",
-          "api": "/session/exchangePhone",
+          "api": "/wechatApplication/session/exchangePhone",
           "effect": "exchangePhone",
           "service": "exchangePhoneData",
           "type": "singleData"
@@ -25,28 +25,28 @@
       "apis": [
         {
           "title": "登录",
-          "api": "/entrance/signIn",
+          "api": "/wechatApplication/entrance/signIn",
           "effect": "signIn",
           "service": "signInData",
           "type": "singleData"
         },
         {
           "title": "静默登录",
-          "api": "/entrance/signInSilent",
+          "api": "/wechatApplication/entrance/signInSilent",
           "effect": "signInSilent",
           "service": "signInSilentData",
           "type": "singleData"
         },
         {
           "title": "注册",
-          "api": "/entrance/registerWithWeChat",
+          "api": "/wechatApplication/entrance/registerWithWeChat",
           "effect": "registerWithWeChat",
           "service": "registerWithWeChatData",
           "type": "singleData"
         },
         {
           "title": "凭证校验",
-          "api": "/entrance/checkTicketValidity",
+          "api": "/wechatApplication/entrance/checkTicketValidity",
           "effect": "checkTicketValidity",
           "service": "checkTicketValidityData",
           "type": "singleData"
@@ -60,7 +60,7 @@
       "apis": [
         {
           "title": "获取元数据",
-          "api": "/metaData/get",
+          "api": "/wechatApplication/metaData/get",
           "effect": "getMetaData",
           "service": "getMetaDataData",
           "type": "singleData"
@@ -74,14 +74,14 @@
       "apis": [
         {
           "title": "存储分享参数",
-          "api": "/share/createShareUrlParams",
+          "api": "/wechatApplication/share/createShareUrlParams",
           "effect": "createShareUrlParameters",
           "service": "createShareUrlParametersData",
           "type": "singleData"
         },
         {
           "title": "兑换分享数据",
-          "api": "/share/exchangeShare",
+          "api": "/wechatApplication/share/exchangeShare",
           "effect": "exchangeShare",
           "service": "exchangeShareData",
           "type": "singleData"
@@ -95,14 +95,14 @@
       "apis": [
         {
           "title": "获取当前登录用户信息",
-          "api": "/customerCenter/customer/getCurrentInfo",
+          "api": "/wechatApplication/customerCenter/customer/getCurrentInfo",
           "effect": "getCurrentInfo",
           "service": "getCurrentInfoData",
           "type": "singleData"
         },
         {
           "title": "获取信息",
-          "api": "/customerCenter/customer/getCustomer",
+          "api": "/wechatApplication/customerCenter/customer/getCustomer",
           "effect": "getCustomer",
           "service": "getCustomerData",
           "type": "singleData"
@@ -116,7 +116,7 @@
       "apis": [
         {
           "title": "获取当前登录用户信息",
-          "api": "/administrativeDivision/singleListTreeThreeLevel",
+          "api": "/wechatApplication/administrativeDivision/singleListTreeThreeLevel",
           "effect": "singleListTreeThreeLevel",
           "service": "singleListTreeThreeLevelData",
           "type": "singleListData"
