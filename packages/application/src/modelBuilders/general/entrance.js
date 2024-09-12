@@ -8,16 +8,22 @@ import {
 
 import {
   checkTicketValidityData,
-  registerWithWeChatData,
+  refreshCaptchaData,
+  resetPasswordData,
   signInData,
   signInSilentData,
+  signInWithEmailData,
+  signInWithPhoneData,
 } from '../../services/entrance';
 
 export const entranceTypeCollection = {
   signIn: 'entrance/signIn',
+  signInWithPhone: 'entrance/signInWithPhone',
+  signInWithEmail: 'entrance/signInWithEmail',
   signInSilent: 'entrance/signInSilent',
-  registerWithWeChat: 'entrance/registerWithWeChat',
+  resetPassword: 'entrance/resetPassword',
   checkTicketValidity: 'entrance/checkTicketValidity',
+  refreshCaptcha: 'entrance/refreshCaptcha',
 };
 
 export function buildModel() {
@@ -39,6 +45,58 @@ export function buildModel() {
         { call, put },
       ) {
         const response = yield call(signInData, payload);
+
+        const dataAdjust = pretreatmentRemoteSingleData({
+          source: response,
+          successCallback: pretreatmentSuccessCallback || null,
+          failCallback: pretreatmentFailCallback || null,
+        });
+
+        yield put({
+          type: reducerNameCollection.reducerRemoteData,
+          payload: dataAdjust,
+          alias,
+          ...reducerDefaultParameters,
+        });
+
+        return dataAdjust;
+      },
+      *signInWithPhone(
+        {
+          payload,
+          alias,
+          pretreatmentSuccessCallback,
+          pretreatmentFailCallback,
+        },
+        { call, put },
+      ) {
+        const response = yield call(signInWithPhoneData, payload);
+
+        const dataAdjust = pretreatmentRemoteSingleData({
+          source: response,
+          successCallback: pretreatmentSuccessCallback || null,
+          failCallback: pretreatmentFailCallback || null,
+        });
+
+        yield put({
+          type: reducerNameCollection.reducerRemoteData,
+          payload: dataAdjust,
+          alias,
+          ...reducerDefaultParameters,
+        });
+
+        return dataAdjust;
+      },
+      *signInWithEmail(
+        {
+          payload,
+          alias,
+          pretreatmentSuccessCallback,
+          pretreatmentFailCallback,
+        },
+        { call, put },
+      ) {
+        const response = yield call(signInWithEmailData, payload);
 
         const dataAdjust = pretreatmentRemoteSingleData({
           source: response,
@@ -81,7 +139,7 @@ export function buildModel() {
 
         return dataAdjust;
       },
-      *registerWithWeChat(
+      *resetPassword(
         {
           payload,
           alias,
@@ -90,7 +148,7 @@ export function buildModel() {
         },
         { call, put },
       ) {
-        const response = yield call(registerWithWeChatData, payload);
+        const response = yield call(resetPasswordData, payload);
 
         const dataAdjust = pretreatmentRemoteSingleData({
           source: response,
@@ -117,6 +175,32 @@ export function buildModel() {
         { call, put },
       ) {
         const response = yield call(checkTicketValidityData, payload);
+
+        const dataAdjust = pretreatmentRemoteSingleData({
+          source: response,
+          successCallback: pretreatmentSuccessCallback || null,
+          failCallback: pretreatmentFailCallback || null,
+        });
+
+        yield put({
+          type: reducerNameCollection.reducerRemoteData,
+          payload: dataAdjust,
+          alias,
+          ...reducerDefaultParameters,
+        });
+
+        return dataAdjust;
+      },
+      *refreshCaptcha(
+        {
+          payload,
+          alias,
+          pretreatmentSuccessCallback,
+          pretreatmentFailCallback,
+        },
+        { call, put },
+      ) {
+        const response = yield call(refreshCaptchaData, payload);
 
         const dataAdjust = pretreatmentRemoteSingleData({
           source: response,

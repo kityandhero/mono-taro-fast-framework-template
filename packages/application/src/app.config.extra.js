@@ -5,7 +5,7 @@ import { filePrefix } from './customConfig';
 const LogoImage = `${filePrefix}746868813.jpeg`;
 
 export const config = {
-  appId: 'pdbpabiprlhjwg',
+  appId: 'pddwo4uuzpdekg',
   showLogInConsole: checkWhetherDevelopmentEnvironment(),
   // showLogInConsole: true,
   // showRequestInfo: checkWhetherDevelopmentEnvironment(),
@@ -15,6 +15,7 @@ export const config = {
   },
   apiSuccessCode: 200,
   authenticationFailCode: 2001,
+  // 是否在静默登录失败后跳转登录界面，需要强制登录的应用建议开启
   navigationToSignInWhenSignInSilentFail: true,
   signInPath: '/customer/pages/signIn/main/index',
   apiVersion: 'beta',

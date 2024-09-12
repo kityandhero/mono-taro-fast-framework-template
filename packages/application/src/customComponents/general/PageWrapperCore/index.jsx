@@ -7,7 +7,7 @@ import {
   transformListData,
 } from 'easy-soft-utility';
 
-import { navigateBack, transformSize } from 'taro-fast-common';
+import { callProcessType, navigateBack, transformSize } from 'taro-fast-common';
 import { CenterBox } from 'taro-fast-component';
 import {
   AuthorizationWrapper,
@@ -19,6 +19,11 @@ import { getQQMapWX } from '../../../utils';
 import BallGridBeat from '../BallGridBeat';
 
 class PageWrapperCore extends AuthorizationWrapper {
+  callProcessCollection = [
+    callProcessType.functionLogic,
+    callProcessType.emptyLogic,
+  ];
+
   loadRemoteRequestDelay = 0;
 
   useFadeSpinWrapper = true;
@@ -79,32 +84,39 @@ class PageWrapperCore extends AuthorizationWrapper {
     );
   };
 
-  dispatchCheckTicketValidity = (data) => {
-    return this.dispatchApi({
+  getCheckTicketValidityApiEffect = (data) => {
+    return {
       type: modelTypeCollection.entranceTypeCollection.checkTicketValidity,
       payload: data,
-    });
+    };
   };
 
-  dispatchRefreshSession = (data) => {
-    return this.dispatchApi({
+  getRefreshSessionApiEffect = (data) => {
+    return {
       type: modelTypeCollection.sessionTypeCollection.refreshSession,
       payload: data,
-    });
+    };
   };
 
-  dispatchGetMetaData = (data) => {
-    return this.dispatchApi({
+  getMetaDataApiEffect = (data) => {
+    return {
       type: modelTypeCollection.globalTypeCollection.getMetaData,
       payload: data,
-    });
+    };
   };
 
-  dispatchSignInSilent = (data) => {
-    return this.dispatchApi({
+  getSignInApiEffect = (data) => {
+    return {
+      type: modelTypeCollection.entranceTypeCollection.signInWithPhone,
+      payload: data,
+    };
+  };
+
+  getSignInSilentApiEffect = (data) => {
+    return {
       type: modelTypeCollection.entranceTypeCollection.signInSilent,
       payload: data,
-    });
+    };
   };
 
   parseSignInResultFromSignInSilentApiData = (remoteData) => {
@@ -113,25 +125,25 @@ class PageWrapperCore extends AuthorizationWrapper {
     return signInResult;
   };
 
-  dispatchRegisterWithWeChat = (data = {}) => {
-    return this.dispatchApi({
+  getRegisterWithWeChatApiEffect = (data = {}) => {
+    return {
       type: modelTypeCollection.entranceTypeCollection.registerWithWeChat,
       payload: data,
-    });
+    };
   };
 
-  dispatchExchangePhone = (data = {}) => {
-    return this.dispatchApi({
+  getExchangePhoneApiEffect = (data = {}) => {
+    return {
       type: modelTypeCollection.sessionTypeCollection.exchangePhone,
       payload: data,
-    });
+    };
   };
 
-  dispatchGetCustomer = (data = {}) => {
-    return this.dispatchApi({
-      type: modelTypeCollection.customerTypeCollection.getCustomer,
+  getGetCustomerApiEffect = (data = {}) => {
+    return {
+      type: modelTypeCollection.customerTypeCollection.getCurrentInfo,
       payload: data,
-    });
+    };
   };
 
   reloadRemoteMetaData = () => {
@@ -160,12 +172,12 @@ class PageWrapperCore extends AuthorizationWrapper {
     return openId || '';
   };
 
-  dispatchGetFullAdministrativeDivisionData = (data = {}) => {
-    return this.dispatchApi({
+  getGetFullAdministrativeDivisionDataApiEffect = (data = {}) => {
+    return {
       type: modelTypeCollection.administrativeDivisionTypeCollection
         .singleListTreeThreeLevel,
       payload: data,
-    });
+    };
   };
 
   transformFullAdministrativeDivisionData = () => {

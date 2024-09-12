@@ -1,7 +1,7 @@
 import { request } from 'easy-soft-utility';
 
 export const createShareUrlParametersDataApiAddress =
-  '/share/createShareUrlParams';
+  '/wechatApplication/share/createShareUrlParams';
 
 export async function createShareUrlParametersData(parameters) {
   return request({
@@ -10,7 +10,8 @@ export async function createShareUrlParametersData(parameters) {
   });
 }
 
-export const exchangeShareDataApiAddress = '/share/exchangeShare';
+export const exchangeShareDataApiAddress =
+  '/wechatApplication/share/exchangeShare';
 
 export async function exchangeShareData(parameters) {
   return request({

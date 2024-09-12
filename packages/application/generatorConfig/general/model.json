@@ -24,10 +24,24 @@
     {
       "apis": [
         {
-          "title": "登录",
+          "title": "账户登录",
           "api": "/wechatApplication/entrance/signIn",
           "effect": "signIn",
           "service": "signInData",
+          "type": "singleData"
+        },
+        {
+          "title": "手机登录",
+          "api": "/wechatApplication/entrance/signInWithPhone",
+          "effect": "signInWithPhone",
+          "service": "signInWithPhoneData",
+          "type": "singleData"
+        },
+        {
+          "title": "邮箱登录",
+          "api": "/wechatApplication/entrance/signInWithEmail",
+          "effect": "signInWithEmail",
+          "service": "signInWithEmailData",
           "type": "singleData"
         },
         {
@@ -38,10 +52,10 @@
           "type": "singleData"
         },
         {
-          "title": "注册",
-          "api": "/wechatApplication/entrance/registerWithWeChat",
-          "effect": "registerWithWeChat",
-          "service": "registerWithWeChatData",
+          "title": "静默登录",
+          "api": "/wechatApplication/entrance/resetPassword",
+          "effect": "resetPassword",
+          "service": "resetPasswordData",
           "type": "singleData"
         },
         {
@@ -49,6 +63,13 @@
           "api": "/wechatApplication/entrance/checkTicketValidity",
           "effect": "checkTicketValidity",
           "service": "checkTicketValidityData",
+          "type": "singleData"
+        },
+        {
+          "title": "凭证校验",
+          "api": "/wechatApplication/entrance/refreshCaptcha",
+          "effect": "refreshCaptcha",
+          "service": "refreshCaptchaData",
           "type": "singleData"
         }
       ],
@@ -95,21 +116,14 @@
       "apis": [
         {
           "title": "获取当前登录用户信息",
-          "api": "/wechatApplication/customerCenter/customer/getCurrentInfo",
+          "api": "/wechatApplication/user/getCurrentInfo",
           "effect": "getCurrentInfo",
           "service": "getCurrentInfoData",
-          "type": "singleData"
-        },
-        {
-          "title": "获取信息",
-          "api": "/wechatApplication/customerCenter/customer/getCustomer",
-          "effect": "getCustomer",
-          "service": "getCustomerData",
           "type": "singleData"
         }
       ],
       "cover": true,
-      "title": "用户相关",
+      "title": "登陆人相关",
       "name": "customer"
     },
     {
