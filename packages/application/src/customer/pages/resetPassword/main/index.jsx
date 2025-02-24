@@ -228,6 +228,7 @@ class SignIn extends PageWrapper {
             weappButton
             text="登录"
             backgroundColor="#0075ff"
+            fontColor="#fff"
             fontSize={32}
             loading={registering || false}
             openType="getPhoneNumber"
